@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#155e75">
+  <meta name="description" content="فرصتي: دليل أولي لاكتشاف فرص العمل عبر الإنترنت.">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
+  <title>فرصتي | Forṣati</title>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#" aria-label="Forṣati home"><span class="brand-mark">ف</span><span>فرصتي <small>| Forṣati</small></span></a>
+    <label class="language-label" for="language" data-i18n="languageLabel">اللغة</label>
+    <select id="language" aria-label="Choose language">
+      <option value="ar">العربية</option>
+      <option value="fr">Français</option>
+      <option value="en">English</option>
+    </select>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <div class="hero-copy">
+        <span class="eyebrow" data-i18n="eyebrow">خطوتك الأولى نحو فرصة جديدة</span>
+        <h1 data-i18n="heroTitle">دليلك لاكتشاف فرص العمل عبر الإنترنت</h1>
+        <p class="lead" data-i18n="heroLead">اعثر على طريق يناسبك، أينما كنت.</p>
+        <p data-i18n="heroBody">اختر بلدك وإمكاناتك، واكتشف منصات ومسارات يمكنك البحث فيها والبدء بالتعلّم خطوة بخطوة.</p>
+      </div>
+      <div class="hero-art" aria-hidden="true"><div class="orb orb-one"></div><div class="orb orb-two"></div><div class="path-card">✦<span>↗</span><i>✓</i></div></div>
+    </section>
+
+    <p class="notice" data-i18n="disclaimer">هذه نسخة تجريبية. توافر المنصات ووسائل الدفع والرسوم تختلف حسب البلد وتتغير؛ تحقّق من الشروط الرسمية قبل التسجيل. لا توجد أرباح مضمونة.</p>
+
+    <section class="panel" id="profile">
+      <div class="section-heading"><span class="step">1</span><div><h2 data-i18n="profileTitle">أخبرنا عنك</h2><p data-i18n="profileIntro">سنستخدم إجاباتك لترتيب اقتراحات مبدئية، لا لاتخاذ قرار نيابة عنك.</p></div></div>
+      <form id="profileForm">
+        <div class="field">
+          <label for="country" data-i18n="countryLabel">بلد الإقامة</label>
+          <select id="country" name="country">
+            <option value="DZ">الجزائر</option><option value="CH">سويسرا</option><option value="MA">المغرب</option><option value="TN">تونس</option><option value="EG">مصر</option><option value="FR">فرنسا</option><option value="GB">المملكة المتحدة</option><option value="US">الولايات المتحدة</option><option value="OTHER">بلد آخر</option>
+          </select>
+        </div>
+        <fieldset class="field"><legend data-i18n="deviceLabel">ما الجهاز الذي تستخدمه؟</legend><div class="choices">
+          <label class="choice"><input type="radio" name="device" value="phone" checked><span data-i18n="phone">الهاتف</span></label>
+          <label class="choice"><input type="radio" name="device" value="computer"><span data-i18n="computer">الحاسوب</span></label>
+          <label class="choice"><input type="radio" name="device" value="both"><span data-i18n="both">كلاهما</span></label>
+        </div></fieldset>
+        <fieldset class="field"><legend data-i18n="budgetLabel">هل تريد البدء دون رأس مال؟</legend><div class="choices">
+          <label class="choice"><input type="radio" name="budget" value="free" checked><span data-i18n="free">نعم</span></label>
+          <label class="choice"><input type="radio" name="budget" value="small"><span data-i18n="smallBudget">يمكنني دفع مبلغ بسيط</span></label>
+        </div></fieldset>
+        <fieldset class="field"><legend data-i18n="interestLabel">ما الذي يهمك أكثر؟</legend><div class="choices interest-choices">
+          <label class="choice"><input type="radio" name="interest" value="digital"><span data-i18n="digital">التصميم والمنتجات الرقمية</span></label>
+          <label class="choice"><input type="radio" name="interest" value="services" checked><span data-i18n="services">تقديم الخدمات</span></label>
+          <label class="choice"><input type="radio" name="interest" value="remote"><span data-i18n="remote">وظيفة عن بُعد</span></label>
+          <label class="choice"><input type="radio" name="interest" value="unsure"><span data-i18n="unsure">لا أعرف بعد</span></label>
+        </div></fieldset>
+        <button class="primary" type="submit" data-i18n="showSuggestions">اعرض اقتراحاتي <span aria-hidden="true">↗</span></button>
+      </form>
+    </section>
+
+    <section class="panel" id="directory">
+      <div class="section-heading"><span class="step">2</span><div><h2 data-i18n="directoryTitle">دليل المنصات</h2><p data-i18n="directoryIntro">ابحث حسب المجال. القائمة هنا أمثلة أولية، وليست تحققًا نهائيًا من الأهلية في كل بلد.</p></div></div>
+      <div class="filters">
+        <label class="sr-only" for="search" data-i18n="searchLabel">ابحث عن منصة أو مجال</label>
+        <input id="search" type="search" placeholder="ابحث عن منصة أو مجال" data-i18n-placeholder="searchPlaceholder">
+        <label class="sr-only" for="category" data-i18n="categoryLabel">المجال</label>
+        <select id="category">
+          <option value="all" data-i18n="allCategories">كل المجالات</option><option value="services" data-i18n="catServices">الخدمات المستقلة</option><option value="digital" data-i18n="catDigital">التصميم والمنتجات الرقمية</option><option value="remote" data-i18n="catRemote">وظائف عن بُعد</option><option value="learn" data-i18n="catLearn">التعلّم</option>
+        </select>
+        <button class="secondary" id="filterButton" type="button" data-i18n="filterButton">عرض المنصات</button>
+      </div>
+      <div id="suggestions" class="results" hidden aria-live="polite"></div>
+      <div id="platforms" class="platform-grid"></div>
+      <div class="tips"><h3 data-i18n="chooseTitle">كيف نختار منصة؟</h3><ul><li data-i18n="tip1">تأكد من قبول بلدك ومن شروط العمر والهوية.</li><li data-i18n="tip2">تحقق من وسائل الدفع والسحب والرسوم.</li><li data-i18n="tip3">ابدأ بقراءة الشروط الرسمية ولا تدفع مقابل وعود بالربح.</li></ul></div>
+    </section>
+
+    <section class="panel plan">
+      <div class="section-heading"><span class="step">3</span><div><h2 data-i18n="planTitle">خطة بسيطة للبدء</h2><p data-i18n="planIntro">لا تحتاج إلى تجربة كل المنصات مرة واحدة. اختر مسارًا واحدًا وابدأ بخطوات صغيرة.</p></div></div>
+      <ol class="plan-list"><li data-i18n="plan1">اختر مجالًا واحدًا: تصميم، منتجات رقمية، صور أو خدمات.</li><li data-i18n="plan2">أنشئ 3 نماذج جيدة من عملك وضعها في ملف واحد.</li><li data-i18n="plan3">اقرأ شروط المنصة وتأكد من قبول بلدك وطريقة استلام الأرباح.</li><li data-i18n="plan4">انشر نموذجًا أو منتجًا واحدًا، ثم حسّنه بناءً على النتائج.</li><li data-i18n="plan5">احتفظ بسجل للمشاهدات والنقرات والمبيعات، ولا تتوقع ربحًا فوريًا.</li></ol>
+      <p class="warning" data-i18n="safety">تنبيه: لا تدفع مقابل وعد بوظيفة أو أرباح مضمونة، ولا تشارك بياناتك البنكية إلا عبر الموقع الرسمي الموثوق.</p>
+    </section>
+  </main>
+  <footer><span data-i18n="footer">فرصتي نموذج تجريبي غير تجاري. الروابط تفتح المواقع الرسمية؛ لم يتم التحقق آليًا من توفر التسجيل أو الدفع في بلدك.</span></footer>
+  <script src="app.js"></script>
+  <script>if ("serviceWorker" in navigator) window.addEventListener("load", () => navigator.serviceWorker.register("./sw.js").catch(() => {}));</script>
+</body>
+</html>
