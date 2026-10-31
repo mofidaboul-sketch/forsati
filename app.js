@@ -1,4 +1,5 @@
-const translations = {
+
+  const translations =  {
 ar: {
 languageLabel:"اللغة",eyebrow:"خطوتك الأولى نحو فرصة جديدة",heroTitle:"دليلك لاكتشاف فرص العمل عبر الإنترنت",heroLead:"اعثر على طريق يناسبك، أينما كنت.",heroBody:"اختر بلدك وإمكاناتك، واكتشف منصات ومسارات يمكنك البحث فيها والبدء بالتعلّم خطوة بخطوة.",disclaimer:"هذه نسخة تجريبية. توافر المنصات ووسائل الدفع والرسوم تختلف حسب البلد وتتغير؛ تحقّق من الشروط الرسمية قبل التسجيل. لا توجد أرباح مضمونة.",profileTitle:"أخبرنا عنك",profileIntro:"سنستخدم إجاباتك لترتيب اقتراحات مبدئية، لا لاتخاذ قرار نيابة عنك.",countryLabel:"بلد الإقامة",deviceLabel:"ما الجهاز الذي تستخدمه؟",phone:"الهاتف",computer:"الحاسوب",both:"كلاهما",budgetLabel:"هل تريد البدء دون رأس مال؟",free:"نعم",smallBudget:"يمكنني دفع مبلغ بسيط",interestLabel:"ما الذي يهمك أكثر؟",digital:"التصميم والمنتجات الرقمية",services:"تقديم الخدمات",remote:"وظيفة عن بُعد",unsure:"لا أعرف بعد",showSuggestions:"اعرض اقتراحاتي",directoryTitle:"دليل المنصات",directoryIntro:"ابحث حسب المجال. القائمة هنا أمثلة أولية، وليست تحققًا نهائيًا من الأهلية في كل بلد.",searchLabel:"ابحث عن منصة أو مجال",searchPlaceholder:"ابحث عن منصة أو مجال",categoryLabel:"المجال",allCategories:"كل المجالات",catServices:"الخدمات المستقلة",catDigital:"التصميم والمنتجات الرقمية",catRemote:"وظائف عن بُعد",catLearn:"التعلّم",filterButton:"عرض المنصات",chooseTitle:"كيف نختار منصة؟",tip1:"تأكد من قبول بلدك ومن شروط العمر والهوية.",tip2:"تحقق من وسائل الدفع والسحب والرسوم.",tip3:"ابدأ بقراءة الشروط الرسمية ولا تدفع مقابل وعود بالربح.",planTitle:"خطة بسيطة للبدء",planIntro:"لا تحتاج إلى تجربة كل المنصات مرة واحدة. اختر مسارًا واحدًا وابدأ بخطوات صغيرة.",plan1:"اختر مجالًا واحدًا: تصميم، منتجات رقمية، صور أو خدمات.",plan2:"أنشئ 3 نماذج جيدة من عملك وضعها في ملف واحد.",plan3:"اقرأ شروط المنصة وتأكد من قبول بلدك وطريقة استلام الأرباح.",plan4:"انشر نموذجًا أو منتجًا واحدًا، ثم حسّنه بناءً على النتائج.",plan5:"احتفظ بسجل للمشاهدات والنقرات والمبيعات، ولا تتوقع ربحًا فوريًا.",safety:"تنبيه: لا تدفع مقابل وعد بوظيفة أو أرباح مضمونة، ولا تشارك بياناتك البنكية إلا عبر الموقع الرسمي الموثوق.",footer:"فرصتي نموذج تجريبي غير تجاري. الروابط تفتح المواقع الرسمية؛ لم يتم التحقق آليًا من توفر التسجيل أو الدفع في بلدك.",countryNames:{DZ:"الجزائر",CH:"سويسرا",MA:"المغرب",TN:"تونس",EG:"مصر",FR:"فرنسا",GB:"المملكة المتحدة",US:"الولايات المتحدة",OTHER:"بلد آخر"},suggestions:"اقتراحات أولية",hide:"إخفاء النتائج",suggestIntro:"هذه أفكار للبحث وليست ضمانًا للأهلية أو الدخل.",device:"جهازك",budgetFree:"تفضّل البدء دون رأس مال",budgetSmall:"يمكنك تخصيص مبلغ بسيط",why:"لماذا قد تناسبك؟",check:"تحقّق من البلد والدفع والرسوم",official:"الموقع الرسمي ↗",nextSteps:"خطواتك التالية",steps:"1. افتح الموقع الرسمي واقرأ شروط بلدك. 2. تأكد من توفر وسيلة سحب مناسبة. 3. جهّز ملفًا أو عينة عمل بسيطة. 4. تجنّب أي جهة تطلب منك دفع مال مقابل وظيفة مضمونة.",costFree:"البداية دون رأس مال مفضّل",costMay:"قد توجد رسوم أو تكاليف",all:"كل المجالات",reasonDigital:"لأنك مهتم/ة بالتصميم أو المنتجات الرقمية. جهّز نماذج من عملك وتحقق من شروط الحساب والسحب.",reasonServices:"لأنك مهتم/ة بتقديم الخدمات للعملاء. جهّز نماذج من عملك وتحقق من شروط الحساب والسحب.",reasonRemote:"لأنك تبحث عن وظيفة عن بُعد. اقرأ متطلبات الوظيفة وتأكد من أنها تقبل بلدك.",reasonUnsure:"يمكنك استكشاف هذه المنصة للتعرّف على المسارات المتاحة. تحقق من الشروط قبل التسجيل.",country:"بلدك"
 },
@@ -53,17 +54,197 @@ function renderPlatforms(){
  $("#platforms").innerHTML=matches.map(p=>`<article class="platform-card"><h3>${p.name}</h3><span class="badge ${p.cost==="may"?"cost":""}">${p.cost==="free"?tr("costFree"):tr("costMay")}</span><p>${p.desc[lang]||p.desc.en}</p><a href="${p.url}" target="_blank" rel="noopener noreferrer">${tr("official")}</a></article>`).join("");
  if(!matches.length) $("#platforms").innerHTML=`<p>${currentLang==="ar"?"لا توجد نتائج مطابقة. جرّب كلمة أخرى أو مجالًا مختلفًا.":currentLang==="fr"?"Aucun résultat. Essayez un autre terme ou domaine.":"No matching results. Try another term or field."}</p>`;
 }
+
 function showSuggestions(){
- const interest=chosen("interest"), budget=chosen("budget"), cat=getCategoryForInterest(interest);
- const relevant=platformData.filter(p=>cat==="all" || p.cats.includes(cat)).filter(p=>budget!=="free" || p.cost==="free");
- const list=(relevant.length?relevant:platformData.filter(p=>cat==="all"||p.cats.includes(cat))).slice(0,4);
- const reasonKey=interest==="digital"?"reasonDigital":interest==="services"?"reasonServices":interest==="remote"?"reasonRemote":"reasonUnsure";
- const device=chosen("device")==="phone"?tr("phone"):chosen("device")==="computer"?tr("computer"):tr("both");
- const intro=`${tr("suggestIntro")} ${tr("country")}: ${countryName()}. ${tr("device")}: ${device}.`;
- $("#suggestions").hidden=false;
- $("#suggestions").innerHTML=`<h3>${tr("suggestions")}</h3><p>${intro}</p><div class="platform-grid">${list.map(p=>`<article class="platform-card"><h3>${p.name}</h3><span class="badge ${p.cost==="may"?"cost":""}">${p.cost==="free"?tr("costFree"):tr("costMay")}</span><p>${p.desc[currentLang]||p.desc.en}</p><p><strong>${tr("why")}</strong> ${tr(reasonKey)}</p><a href="${p.url}" target="_blank" rel="noopener noreferrer">${tr("official")}</a></article>`).join("")}</div><h4>${tr("nextSteps")}</h4><p>${tr("steps")}</p><button class="secondary" id="hideResults" type="button">${tr("hide")}</button>`;
- $("#hideResults").addEventListener("click",()=>{$("#suggestions").hidden=true;});
- $("#suggestions").scrollIntoView({behavior:"smooth",block:"start"});
+ const interest = chosen("interest");
+ const budget = chosen("budget");
+ const cat = getCategoryForInterest(interest);
+
+ const country = $("#country").value;
+ const countryLabel = countryName();
+
+ const countryNotes = {
+  DZ: {
+   ar: "تحققي من توفر السحب البنكي ووسائل الدفع الدولية في الجزائر.",
+   fr: "Vérifiez les moyens de retrait et de paiement disponibles en Algérie.",
+   en: "Check available banking and international payout methods in Algeria."
+  },
+  CH: {
+   ar: "تحققي من شروط السحب والتحويل البنكي والرسوم في سويسرا.",
+   fr: "Vérifiez les conditions de retrait, de virement et les frais en Suisse.", en: "Check withdrawal, bank transfer requirements and fees in Switzerland."
+  },
+  MA: {
+   ar: "تحققي من وسائل السحب والتحويل المتاحة في المغرب.",
+   fr: "Vérifiez les moyens de retrait et de transfert disponibles au Maroc.",
+   en: "Check available withdrawal and transfer methods in Morocco."
+  },
+  TN: {
+   ar: "تحققي من شروط الدفع والسحب الدولي في تونس.",
+   fr: "Vérifiez les conditions de paiement et de retrait international en Tunisie.",
+   en: "Check international payment and withdrawal requirements in Tunisia."
+  },
+  EG: {
+   ar: "تحققي من وسائل الدفع والسحب المتاحة في مصر.",
+   fr: "Vérifiez les moyens de paiement et de retrait disponibles en Égypte.",
+   en: "Check available payment and withdrawal methods in Egypt."
+  },
+  FR: {
+   ar: "تحققي من شروط الحساب البنكي ووسائل السحب في فرنسا.",
+   fr: "Vérifiez les conditions bancaires et les moyens de retrait en France.",
+   en: "Check banking requirements and withdrawal methods in France."
+  },
+  GB: {
+   ar: "تحققي من شروط التحويل البنكي والسحب في المملكة المتحدة.",
+   fr: "Vérifiez les conditions de virement et de retrait au Royaume-Uni.",
+   en: "Check bank transfer and withdrawal requirements in the UK."
+  },
+  US: {
+   ar: "تحققي من شروط الدفع والضرائب ووسائل السحب في الولايات المتحدة.",
+   fr: "Vérifiez les conditions de paiement, les taxes et les retraits aux États-Unis.",
+   en: "Check payment, tax and withdrawal requirements in the United States."
+  },
+  OTHER: {
+   ar: "تحققي من قائمة الدول المدعومة لدى المنصة قبل التسجيل.",
+   fr: "Vérifiez les pays acceptés par la plateforme avant l'inscription.",
+   en: "Check the platform's supported countries before registering."
+  }
+ };
+
+ const note = countryNotes[country] || countryNotes.OTHER;
+
+ const relevant = platformData
+  .filter(p => cat === "all" || p.cats.includes(cat))
+  .filter(p => budget !== "free" || p.cost === "free");
+
+ const list = relevant.length
+  ? relevant.slice(0, 4)
+  : platformData
+      .filter(p => cat === "all" || p.cats.includes(cat))
+      .slice(0, 4);
+
+const reasonKey =
+  interest === "digital" ? "reasonDigital" :
+  interest === "services" ? "reasonServices" :
+  interest === "remote" ? "reasonRemote" :
+  "reasonUnsure";
+  
+
+ const device = deviceName();
+
+ const languageLabels = {
+  ar: {
+   country: "بلدك",
+   device: "جهازك",
+   warning: "تنبيه مهم",
+   eligibility: "أهلية التسجيل",
+   verify: "تحتاج إلى التحقق",
+   payment: "وسائل الدفع والسحب",
+   paymentNote: "تختلف وسائل الدفع والرسوم حسب البلد والمنصة والحساب.",
+   officialCheck: "راجعي الموقع الرسمي للمنصة قبل التسجيل للتأكد من دعم بلدك وشروط السحب.",
+   noResults: "لم نعثر على اقتراحات مطابقة. جرّبي تغيير اختياراتك."
+  },
+  fr: {
+   country: "Votre pays",
+   device: "Votre appareil",
+   warning: "Information importante",
+   eligibility: "Éligibilité",
+   verify: "À vérifier",
+   payment: "Paiements et retraits",
+   paymentNote: "Les moyens de paiement et les frais varient selon le pays, la plateforme et le compte.",
+   officialCheck: "Consultez le site officiel avant de vous inscrire pour vérifier votre éligibilité et les conditions de retrait.",
+   noResults: "Aucune suggestion correspondante. Essayez de modifier vos choix."
+  },
+  en: {
+   country: "Your country",
+   device: "Your device",
+   warning: "Important information",
+   eligibility: "Eligibility",
+   verify: "Needs verification",
+   payment: "Payments and withdrawals",
+   paymentNote: "Payment methods and fees vary by country, platform and account.",
+   officialCheck: "Check the official website before registering to confirm eligibility and withdrawal requirements.",
+   noResults: "No matching suggestions. Try changing your selections."
+  }
+ };
+
+ const labels = languageLabels[currentLang] || languageLabels.en;
+
+ $("#suggestions").hidden = false;
+
+ $("#suggestions").innerHTML = `
+  <h3>${tr("suggestions")}</h3>
+
+  <p>${tr("suggestIntro")}</p>
+
+  <p>
+   <strong>${labels.country}:</strong>
+   ${countryLabel}
+  </p>
+
+  <p>
+   <strong>${labels.device}:</strong>
+   ${device}
+  </p>
+
+  <div class="tips">
+   <h4>${labels.warning}</h4>
+   <p>${note[currentLang] || note.en}</p>
+   <p>${labels.officialCheck}</p>
+  </div>
+
+  <div class="platform-grid">
+   ${
+    list.length
+    ? list.map(p => `
+      <article class="platform-card">
+       <h3>${p.name}</h3>
+
+       <span class="badge ${p.cost === "may" ? "cost" : ""}">
+        ${p.cost === "free" ? tr("costFree") : tr("costMay")}
+       </span>
+
+       <p>${p.desc[currentLang] || p.desc.en}</p>
+
+       <p>
+        <strong>${labels.eligibility}:</strong>
+        ${labels.verify}
+       </p>
+
+       <p>
+        <strong>${labels.payment}:</strong>
+        ${labels.paymentNote}
+       </p>
+
+       <p>${tr("why")} ${tr(reasonKey)}</p>
+
+       <a href="${p.url}"
+          target="_blank"
+          rel="noopener noreferrer">
+          ${tr("official")}
+       </a>
+      </article>
+     `).join("")
+    : `<p>${labels.noResults}</p>`
+   }
+  </div>
+
+  <h4>${tr("nextSteps")}</h4>
+  <p>${tr("steps")}</p>
+
+  <button class="secondary" id="hideResults" type="button">
+   ${tr("hide")}
+  </button>
+ `;
+
+ $("#hideResults").addEventListener("click", () => {
+  $("#suggestions").hidden = true;
+ });
+
+ $("#suggestions").scrollIntoView({
+  behavior: "smooth",
+  block: "start"
+ });
+
 }
 $("#language").addEventListener("change",e=>applyLanguage(e.target.value));
 $("#profileForm").addEventListener("submit",e=>{e.preventDefault();showSuggestions();});
